@@ -1,12 +1,9 @@
-
-/*Added a boat image as background.*/
 body {
-    background-image: url("https://static.pexels.com/photos/273886/pexels-photo-273886.jpeg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+	background-image: url("https://static.pexels.com/photos/273886/pexels-photo-273886.jpeg");
+	background-size: cover;
+	background-attachment: fixed;
 }
-
+/* Navbar */
 /*Navigation Start*/
 ul#list-nav {
    {
@@ -59,73 +56,82 @@ color:white;
 }
 /* Navigation End */
 
-/* Logo */
-#logo {
-    position: absolute;
-    max-width: 200px; 
-    max-height: 200px;
-    top: 30px;
-    right: 30px;
-    border-radius: 100%;
-    border: 2px solid white;
-    
+#myInput {
+    background-image: url("./images/helm.png"); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 50%; /* Full-width */
+    font-size: 30px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin:50px 12px 100px 200px; /* Add some space below the input */
+    float: left;
+    position: relative;
+    border-radius:15px;  
 }
-/* Logo End */
+
+.logo{
+    
+    max-height: 10em;
+    max-width: 10em;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin:25px 100px 0 0;
+    float: right;
+}
 
 /* Gallery */
 
-div.gallery {
-    margin: 0 5% 10% 5%;
-    border-radius: 25%;
-    float: left;
+.image{
+    height:auto;
+    width:auto;
+    height: 400px;
     width: 500px;
-    position: relative;
-}
-
-
-div.gallery img {
-    width: 100%;
+    border-radius: 25%;
     
-    border-radius: 25%;
-}
-
-div.gallery2 {
-    margin: 0 5% 6% 5%;
-    border-radius: 25%;
-    float: left;
-    width: 500px;
-    position: relative;
 }
 
 
-div.gallery2 img {
-    width: 100%;    
-    border-radius: 25%;
+.logo{
+    
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin:5px 100px 0 0;
+    float: right;
 }
 
 
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
-
-/* Galley End */
-
-.image {
-  opacity: 1;
-  display: block;
+.container {
+  position: relative;
   width: 100%;
-  height: 339px;
-  transition: .5s ease;
-  backface-visibility: hidden;
+  margin: 0 50px 75px 120px;
 }
 
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+  border-radius: 25%;
+}
+
+.container:hover .overlay {
+  width: 500px;
+  background: rgba(0, 0, 0, 0.5);
+}
 
 
 .text {
   white-space: wrap; 
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   position: absolute;
   overflow: hidden;
   top: 50%;
@@ -134,26 +140,11 @@ div.desc {
   -ms-transform: translate(-50%, -50%);
 }
 
-.middle {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #008CBA;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .5s ease;
-  border-radius: 25%
+.rightbox{
+    float: left;
 }
-
-.gallery:hover .middle {
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-.gallery2:hover .middle {
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+.leftbox{
+    float: left;
 }
 
 .button {
@@ -163,9 +154,9 @@ div.desc {
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 28px;
+  font-size: 22px;
   padding: 20px;
-  width: 225px;
+  width: 200px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -195,28 +186,4 @@ div.desc {
   opacity: 1;
   right: 0;
 }
-
-#myInput {
-    background-image: url("../WebStore/images/helm.png"); /* Add a search icon to input */
-    background-position: 10px 12px; /* Position the search icon */
-    background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 50%; /* Full-width */
-    font-size: 30px; /* Increase font-size */
-    padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
-    margin:50px 12px 100px 200px; /* Add some space below the input */
-    float: left;
-    position: relative;
-    border-radius:15px;  
-}
-
-.leftbox{
-  float:left;
-  width: 30%;
-  margin-left: 100px;
-}
-
-.rightbox{
-  float:right;
-  width: 50%;
-}
+</style>
